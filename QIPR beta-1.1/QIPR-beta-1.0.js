@@ -3,7 +3,7 @@
     (c) 2019-2020 QINGDKJ
     Released under the MIT License
 
-    Date:2020/2/24 15:10
+    Date:2020/2/24 19：58
 */
 
 console.log("By qipr.js , it works.");
