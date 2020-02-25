@@ -1,4 +1,4 @@
-# QIPR JavaScript Labrary
+# QIPR JavaScript Library
 
 #### 介绍
 一个Javascript库，用来实现简洁的响应式布局。
