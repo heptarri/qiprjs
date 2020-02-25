@@ -158,18 +158,27 @@ function QiControl_Ic(obj) {
 /////////////////////////////////////////////// CSS START /////////////////////////////////////////////////
 
 //buttons
-function QIS_Button_LogIn(qisobj){
-
+function QIS_Button_LogIn(qisobj) {
+    var controlID = qisobj.controlID;
+    var color1 = qisobj.mainColor;
+    var color2 = qisobj.secondColor;
+    var color3 = qisobj.thirdColor;
 }
-function QIS_Button_Back(qisobj){
-
+function QIS_Button_Back(qisobj) {
+    var controlID = qisobj.controlID;
+    var color1 = qisobj.mainColor;
+    var color2 = qisobj.secondColor;
+    var color3 = qisobj.thirdColor;
 }
-function QIS_Button_Text(qisobj){
-
+function QIS_Button_Text(qisobj) {
+    var controlID = qisobj.controlID;
+    var color1 = qisobj.mainColor;
+    var color2 = qisobj.secondColor;
+    var color3 = qisobj.thirdColor;
 }
 
 //textbox (input)
-function QIS_Text_Input(qisobj){
+function QIS_Text_Input(qisobj) {
 
 }
 
