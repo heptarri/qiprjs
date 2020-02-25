@@ -11,8 +11,6 @@
 
 #### How to use it?
 我们为了您可以很方便的使用他，我们提供了使用文档(Markdown)文件。
-如果您不想下载这个js，您也可以试试我们的cdn。
-cdn链接：qingdkj.gitee.io/qipr-beta-1.0.js
 
 #### How can I help it?
 您可以试一试为它添加一些功能（请在md中说明）
