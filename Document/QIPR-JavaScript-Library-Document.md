@@ -60,7 +60,6 @@ var textobj={
     controlID:"controlID",
     maxWidth:500,
     minWidth:300,
-    imageAddress:"./images/phone.jpg",
     whereImage:"left",//靠哪一方？left or right
     imageHeight:300,//图片的高度是多少？单位:px
     ChangeID:"ChangeID"//方便地改变变化后的样式,使用JavaScript

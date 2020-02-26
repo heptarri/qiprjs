@@ -151,6 +151,24 @@ function QiControl_Ic(obj) {
     }
 }
 
+function QiImage_Float(obj){
+    if (window.innerWidth < obj.maxWidth && window.innerWidth > obj.minWidth) {
+        var PhotoFloat=obj.whereImage;
+        var styles=obj.controlID.style;
+        styles.height=`${obj.imageHeight}px`;
+        styles.float=PhotoFloat;
+        styles.position="relative";
+        if(PhotoFloat=="left"){
+            var halfWindow=-window.innerWidth;
+            styles.left=`${halfWindow}px`;
+        }else if(PhotoFloat="right"){
+            var halfWindow=window.innerWidth;
+            styles.left=`${halfWindow}px`;
+        }else{
+            console.error("Please key the true float value!");
+        }
+    }
+}
 
 //////////////////////////////////////// MODELS END ////////////////////////////////////////////
 
