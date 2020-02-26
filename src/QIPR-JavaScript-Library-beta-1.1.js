@@ -19,7 +19,7 @@ function qiprRunning() {
     document.body.appendChild(qiprRunningControl);
 }
 
-/////////////////////////////////////////  MAIN FUNCTIONS START  ///////////////////////////////////////
+/////////////////////////////////////////  MAIN MOMENRY FUNCTIONS START  ///////////////////////////////////////
 function QICCFUNCTION(obj) {
     var controlID = obj.QICC.QcontrolID;
     var styles = obj.QICC.todo;
