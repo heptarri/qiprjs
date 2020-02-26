@@ -106,10 +106,10 @@ function QiControl_Sm(obj) {
             QICCFUNCTION(obj);
             hover(obj);
             active(obj);
+            control.id = obj.ChangeID;
         } finally {
             console.log("QICCFUNCTION  HOVER  ACTIVE  LOAD SUCCESSED!");
         }
-        control.id = obj.ChangeID;
     }
 }
 
@@ -117,7 +117,6 @@ function QiControl_Ic(obj) {
 
     var control = document.getElementById(obj.controlID);
     if (window.innerWidth < obj.maxWidth && window.innerWidth > obj.minWidth) {
-        control.id = obj.ChangeID;
         control.style.display = "none";
         let ControlButton = document.createElement("button");
 
@@ -145,6 +144,7 @@ function QiControl_Ic(obj) {
             QICCFUNCTION(obj);
             hover(obj);
             active(obj);
+            control.id = obj.ChangeID;
         } finally {
             console.log("QICCFUNCTION  HOVER  ACTIVE  LOAD SUCCESSED!");
         }
@@ -166,6 +166,15 @@ function QiImage_Float(obj){
             styles.left=`${halfWindow}px`;
         }else{
             console.error("Please key the true float value!");
+        }
+
+        try {
+            QICCFUNCTION(obj);
+            hover(obj);
+            active(obj);
+            control.id = obj.ChangeID;
+        } finally {
+            console.log("QICCFUNCTION  HOVER  ACTIVE  LOAD SUCCESSED!");
         }
     }
 }
