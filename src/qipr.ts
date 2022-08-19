@@ -58,13 +58,13 @@ class Item {
     }
 
     /**
-     * 设置元素的颜色
+     * 设置元素的样式
      * @param str 元素的StyleSheet(CSS)样式字符串
      * @returns 是否设置成功
      */
     public setStyle(str: string ): boolean {
-        if (this.tmp != null) {
-            this.tmp.style = str;
+        if (this.para != null) {
+            this.para.style = str;
             return true;
         } else {
             console.error("Can't fount this element.");
