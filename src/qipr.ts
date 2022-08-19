@@ -26,7 +26,7 @@ class Item {
 
     /**
      * 向document.body中加入元素
-     * @return 元素是否成功加入
+     * @returns 元素是否成功加入
      */
     public append(): boolean {
         this.tmp = document.getElementById(this.controlInfo.fatherID);
