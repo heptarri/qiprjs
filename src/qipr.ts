@@ -12,7 +12,6 @@ interface controlInformation {
     fatherID: string
 }
 
-
 /**
  * 创建的元素类，可为原生HTML+中所有的元素
  */
@@ -33,7 +32,7 @@ class Item {
         this.fa = document.getElementById(controlInfo.fatherID);
         this.para = document.createElement(controlInfo.Type);
         this.para.id = controlInfo.ID;
-    } 
+    }
 
     /**
      * 向document.body中加入元素
@@ -42,6 +41,21 @@ class Item {
     public append(): boolean {
         if (this.fa != null) {
             this.fa.appendChild(this.para);
+            return true;
+        } else {
+            console.error(`${this.fa} is null.`);
+            return false;
+        }
+    }
+
+    /**
+     * 
+     * @param elem 指定插入元素之前的元素ID
+     * @returns 元素是否成功插入
+     */
+    public popsAppend(id: string): boolean {
+        if (this.fa != null) {
+            this.fa.insertAfter(this.para,document.getElementById(id));
             return true;
         } else {
             console.error(`${this.fa} is null.`);
@@ -115,11 +129,10 @@ class Item {
             this.isHidden = true;
             return true;
         } else {
-            console.error("Can;t fount this element.");
+            console.error("Can't fount this element.");
             return false;
         }
     }
-
 
     /**
      * 显示隐藏的元素
