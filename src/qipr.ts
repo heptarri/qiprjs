@@ -21,28 +21,29 @@ class Item {
     public fa: any;
     public para: any;
 
+    public isHidden: any;
+    public isVisi: any;
+
     /**
      * 构造，用以初始化
      * @param controlInfo 传入的元素信息
      */
     constructor(controlInfo: controlInformation) {
         this.controlInfo = controlInfo;
-    }
+        this.fa = document.getElementById(controlInfo.fatherID);
+        this.para = document.createElement(controlInfo.Type);
+        this.para.id = controlInfo.ID;
+    } 
 
     /**
      * 向document.body中加入元素
      * @returns 元素是否成功加入
      */
     public append(): boolean {
-        this.fa = document.getElementById(this.controlInfo.fatherID);
-        this.para = document.createElement(this.controlInfo.Type);
-        this.para.id = this.controlInfo.ID;
-
         if (this.fa != null) {
             this.fa.appendChild(this.para);
             return true;
-        }
-        else {
+        } else {
             console.error(`${this.fa} is null.`);
             return false;
         }
@@ -95,5 +96,46 @@ class Item {
             return false;
         }
     }
-}
 
+    /**
+     * 隐藏而不删除元素
+     * @param mode 隐藏后是否占位
+     * @returns 是否隐藏成功
+     */
+    public hide(mode: boolean): boolean {
+        var obj = document.getElementById(this.controlInfo.ID);
+        if (obj != null) {
+            if (mode) {
+                this.setStyle('visibility:hidden');
+                this.isVisi = true;
+            } else {
+                this.setStyle('display:none')
+                this.isVisi = false;
+            }
+            this.isHidden = true;
+            return true;
+        } else {
+            console.error("Can;t fount this element.");
+            return false;
+        }
+    }
+
+
+    /**
+     * 显示隐藏的元素
+     * @returns 是否显示成功
+     */
+    public show(): boolean {
+        var obj = document.getElementById(this.controlInfo.ID);
+        if (!this.isHidden || obj == null) {
+            return false;
+        } else {
+            if (this.isVisi) {
+                this.setStyle('visibility:visible');
+            } else {
+                this.setStyle('display:inline');
+            }
+            return true;
+        }
+    }
+}
