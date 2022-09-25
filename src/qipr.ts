@@ -1,6 +1,6 @@
 /**
  * @author qingdkj
- * @version 2.0
+ * @version 2.2
  */
 
 /**
@@ -20,8 +20,8 @@ class Item {
     public fa: any;
     public para: any;
 
-    public isHidden: any;
-    public isVisi: any;
+    public isHidden: boolean;
+    public isVisi: boolean;
 
     /**
      * 构造，用以初始化
@@ -50,7 +50,7 @@ class Item {
 
     /**
      * 
-     * @param elem 指定插入元素之前的元素ID
+     * @param id 指定插入元素之前的元素ID
      * @returns 元素是否成功插入
      */
     public popsAppend(id: string): boolean {
